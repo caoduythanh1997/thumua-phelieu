@@ -2,44 +2,25 @@ import _style from './header.module.scss';
 import classNames from 'classnames/bind';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { toSlug, removeUnicode, stringHTML } from '../Component/common';
+import slugify from 'slugify';
 
 const cx = classNames.bind(_style);
 const category = [
 	{
 		title: 'mua phế liệu săt',
-		href: '/',
 	},
 	{
 		title: 'mua phế liệu nhôm',
-		href: '/',
 	},
 	{
 		title: 'mua phế liệu đồng',
-		href: '/',
 	},
 	{
 		title: 'mua phế liệu điện tử',
-		href: '/',
 	},
 	{
 		title: 'mua phế liệu niken',
-		href: '/',
-	},
-	{
-		title: 'mua phế liệu niken',
-		href: '/',
-	},
-	{
-		title: 'mua phế liệu niken',
-		href: '/',
-	},
-	{
-		title: 'mua phế liệu niken',
-		href: '/',
-	},
-	{
-		title: 'mua phế liệu niken',
-		href: '/',
 	},
 ];
 export default function Header() {
@@ -86,7 +67,7 @@ export default function Header() {
 				<ul className={cx('category_wrapper')}>
 					{category.map((content, index) => (
 						<li className={cx('categoryItem')} key={index}>
-							<Link href={content.title.replace('/%20/g', '-')}>{content.title}</Link>
+							<Link href={slugify(content.title)}>{content.title}</Link>
 						</li>
 					))}
 				</ul>

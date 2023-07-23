@@ -8,6 +8,11 @@ import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'], weight: '500' });
 
+export const metadata: Metadata = {
+	title: 'Thu mua phế liệu',
+	description: 'ở đây mua phế liệu giá cao',
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="en">

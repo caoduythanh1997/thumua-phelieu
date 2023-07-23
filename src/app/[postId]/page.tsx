@@ -1,6 +1,10 @@
 import Head from 'next/head';
-
-export default function PagePost({ params }: { params: { postId: string } }) {
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+	title: 'Thu mua phế liệu',
+	description: 'ở đây mua phế liệu giá cao',
+};
+export default function PagePost({ params }: any) {
 	return (
 		<>
 			<Head>
