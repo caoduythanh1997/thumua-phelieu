@@ -29,10 +29,7 @@ export default function Header() {
 			<div className={cx('title_bar')}>
 				<div className={cx('wrapper')}>
 					<div className={cx('contact')}>
-						<p className={cx('contact__label_text')}>Liên Hệ:</p>
-						<a className={cx('contact__link-button')} href="#">
-							0971.482.218
-						</a>
+						<p className={cx('contact__label_text')}>liên hệ hỗ trợ: 0971482218</p>
 					</div>
 				</div>
 			</div>

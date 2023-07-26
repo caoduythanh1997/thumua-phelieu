@@ -1,5 +1,5 @@
 $primary-color-backgroud-Header: #f0f0f0;
-$primary-color-backgroud-title-header: #27374d;
+$primary-color-backgroud-title-header: #78c1f3;
 .header_bar {
 	background-color: $primary-color-backgroud-Header;
 	width: 100%;
@@ -60,7 +60,7 @@ $primary-color-backgroud-title-header: #27374d;
 	justify-content: center;
 	&_wrapper {
 		width: 85%;
-		height: 70px;
+		height: 100px;
 	}
 }
 .content_logo {
@@ -72,7 +72,7 @@ $primary-color-backgroud-title-header: #27374d;
 		text-align: center;
 		text-transform: uppercase;
 		font-size: 28px;
-		line-height: 70px;
+		line-height: 100px;
 		white-space: nowrap;
 		sle p {
 			color: #070a52;
@@ -89,7 +89,7 @@ $primary-color-backgroud-title-header: #27374d;
 .category {
 	width: 100%;
 	height: 40px;
-	background-color: #146c94;
+	background-color: #78c1f3;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
