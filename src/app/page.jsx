@@ -9,7 +9,7 @@ export default function Home() {
 		<>
 			<Header Props={''} />
 			<div className={cx('main')}>
-				<p>Trang Home</p>
+				<p>Trang Chủ</p>
 			</div>
 		</>
 	);
