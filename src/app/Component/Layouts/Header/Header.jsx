@@ -1,35 +1,45 @@
-import _style from './header.module.scss';
-import classNames from 'classnames/bind';
-import type { Metadata } from 'next';
 import Link from 'next/link';
-import { toSlug, removeUnicode, stringHTML } from '../Component/common';
-import slugify from 'slugify';
+import classNames from 'classnames/bind';
+import _style from './header.module.scss';
+import { toSlug } from '../../Common/common';
 
 const cx = classNames.bind(_style);
+async function getData() {
+	const getPost = await fetch('https://jsonplaceholder.typicode.com/posts');
+	const data = await getPost.json();
+	return data;
+}
+
 const category = [
 	{
-		title: 'mua phế liệu săt',
+		title: 'Thương ngây',
+		id: '01',
 	},
 	{
-		title: 'mua phế liệu nhôm',
+		title: 'Thương Hâm',
+		id: '02',
 	},
 	{
-		title: 'mua phế liệu đồng',
+		title: 'Thương não',
+		id: '03',
 	},
 	{
 		title: 'mua phế liệu điện tử',
+		id: '04',
 	},
 	{
 		title: 'mua phế liệu niken',
+		id: '05',
 	},
 ];
-export default function Header() {
+export default async function Header({ Props }) {
+	const dt = await getData();
 	return (
 		<header className={cx('header_bar')}>
 			<div className={cx('title_bar')}>
 				<div className={cx('wrapper')}>
 					<div className={cx('contact')}>
-						<p className={cx('contact__label_text')}>liên hệ hỗ trợ: 0971482218</p>
+						<p className={cx('contact__label_text')}>liên hệ hỗ trợ: 099999999999</p>
 					</div>
 				</div>
 			</div>
@@ -64,7 +74,16 @@ export default function Header() {
 				<ul className={cx('category_wrapper')}>
 					{category.map((content, index) => (
 						<li className={cx('categoryItem')} key={index}>
-							<Link href={slugify(content.title)}>{content.title}</Link>
+							<Link
+								href={{
+									pathname: `/posts/${toSlug(content.title)}`,
+									query: {
+										id: content.id,
+									},
+								}}
+							>
+								{content.title}
+							</Link>
 						</li>
 					))}
 				</ul>

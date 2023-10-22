@@ -1,0 +1,174 @@
+.login {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	&-form {
+		margin-top: 155px;
+		width: 550px;
+		height: 550px;
+		box-shadow: 0 1px 2px var(--shadow-2);
+		display: flex;
+		flex-direction: column;
+		&_title {
+			height: 55px;
+			text-transform: uppercase;
+			font-size: 2.1rem;
+			font-weight: 600;
+			line-height: 55px;
+			text-align: center;
+		}
+		&_content {
+			height: 300px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		&_end {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: end;
+		}
+	}
+}
+
+.formUser {
+	height: 55px;
+	padding: 0 25px;
+	line-height: 55px;
+	display: flex;
+	&-title {
+		width: 100px;
+		p {
+			font-size: 1.5rem;
+		}
+	}
+	&-input {
+		flex: 1;
+		input {
+			width: 100%;
+			height: 35px;
+			border: 1px solid #dddddd;
+			outline: none;
+			padding: 5px 10px;
+			border-radius: 5px;
+		}
+	}
+}
+.formPassword {
+	height: 55px;
+	padding: 0 25px;
+	line-height: 55px;
+	display: flex;
+	&-title {
+		width: 100px;
+		p {
+			font-size: 1.5rem;
+		}
+	}
+	&-input {
+		flex: 1;
+		input {
+			width: 100%;
+			height: 35px;
+			border: 1px solid #dddddd;
+			outline: none;
+			padding: 5px 10px;
+			border-radius: 5px;
+		}
+	}
+}
+.formLogin {
+	height: 85px;
+	display: flex;
+	flex-direction: column;
+	&-ForgotPass {
+		width: 100%;
+		height: 35px;
+		line-height: 35px;
+		padding: 0 25px;
+		user-select: none;
+		p {
+			float: right;
+		}
+	}
+	&-Button {
+		flex: 1;
+		width: 100%;
+		padding: 0 25px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		&_login {
+			cursor: pointer;
+			width: 150px;
+			height: 30px;
+			background-color: black;
+			line-height: 30px;
+			border-radius: 10px;
+			user-select: none;
+			p {
+				color: white;
+			}
+		}
+	}
+}
+.formContact {
+	height: 65px;
+	display: flex;
+	padding: 0 10px;
+	flex-direction: row;
+	justify-content: space-between;
+	line-height: 65px;
+	margin-bottom: 5px;
+	&-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&_icon {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+		}
+		&_content {
+			flex: 1;
+			padding: 0 5px;
+			font-weight: 600;
+			white-space: nowrap;
+			p {
+				text-transform: uppercase;
+				font-size: 1.3rem;
+			}
+		}
+		cursor: pointer;
+		&:hover {
+			background-color: #d2e9e9;
+			border-radius: 5px;
+		}
+	}
+}
+.formRegister {
+	height: 65px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&-button {
+		width: 300px;
+		height: 30px;
+		line-height: 30px;
+		background-color: #3a98b9;
+		text-align: center;
+		cursor: pointer;
+		p {
+			color: white;
+			text-transform: uppercase;
+		}
+	}
+}
